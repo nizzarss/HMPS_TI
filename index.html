@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sistem Informasi HMPS Teknologi Informasi UIN Salatiga — Kabinet Arunika 2026">
+<title>HMPS Teknologi Informasi — UIN Salatiga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="preloading">
+<div class="welcome-screen waiting" id="welcomeScreen" aria-label="Selamat datang di HMPS Teknologi Informasi">
+  <div class="welcome-grid" aria-hidden="true"></div>
+  <div class="welcome-orbit-bg" aria-hidden="true"></div>
+  <div class="welcome-particles" aria-hidden="true">
+    <i style="--x:12%;--y:20%;--d:5.4s;--s:3px"></i><i style="--x:24%;--y:68%;--d:6.2s;--s:2px"></i><i style="--x:31%;--y:36%;--d:7.1s;--s:2px"></i><i style="--x:42%;--y:79%;--d:5.8s;--s:3px"></i>
+    <i style="--x:58%;--y:19%;--d:6.8s;--s:2px"></i><i style="--x:66%;--y:74%;--d:5.2s;--s:3px"></i><i style="--x:73%;--y:33%;--d:7.4s;--s:2px"></i><i style="--x:84%;--y:61%;--d:6.1s;--s:3px"></i>
+    <i style="--x:90%;--y:24%;--d:5.7s;--s:2px"></i><i style="--x:8%;--y:55%;--d:7.8s;--s:2px"></i><i style="--x:18%;--y:84%;--d:6.5s;--s:3px"></i><i style="--x:78%;--y:84%;--d:7.2s;--s:2px"></i>
+  </div>
+  <div class="welcome-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="welcome-topline"><span></span> HMPS TI // UIN SALATIGA <span></span></div>
+  <div class="welcome-center">
+    <div class="welcome-logo-wrap">
+      <div class="welcome-orbit welcome-orbit-a"></div>
+      <div class="welcome-orbit welcome-orbit-b"></div>
+      <div class="welcome-logo-shell">
+        <div class="welcome-logo-ring"></div>
+        <img src="assets/logo/logo-transparent.png" alt="Logo HMPS Teknologi Informasi UIN Salatiga">
+      </div>
+      <div class="welcome-chip">ARUNIKA <b>2026</b></div>
+    </div>
+    <p class="welcome-kicker">WELCOME TO</p>
+    <h2>HMPS <span>Teknologi Informasi</span></h2>
+    <p class="welcome-sub">UIN Salatiga · Kabinet Arunika 2026</p>
+    <div class="welcome-progress" aria-hidden="true"><span></span></div>
+    <div class="welcome-status"><span><i></i> MENGAKTIFKAN RUANG DIGITAL</span><b>100%</b></div>
+  </div>
+</div>
+<audio id="welcomeAudio" src="assets/audio/welcome.mp3" preload="auto" playsinline aria-hidden="true"></audio>
+<canvas id="spaceCanvas" aria-hidden="true"></canvas>
+<div class="ambient-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<a class="skip" href="#main">Lewati ke konten</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#beranda" aria-label="HMPS Teknologi Informasi UIN Salatiga">
+    <span class="brand-logo"><img src="assets/logo/logo-transparent.png" alt="Logo HMPS Teknologi Informasi"></span>
+    <span class="brand-copy"><strong>HMPS Teknologi Informasi</strong><small>UIN Salatiga</small></span>
+  </a>
+  <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <nav id="menu" class="menu" aria-label="Navigasi utama">
+    <a href="#beranda">Beranda</a><a href="#tentang">Tentang HMPS</a><a href="#struktur">Struktur</a><a href="#kegiatan">Kegiatan</a><a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero" id="beranda">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow glow-a" aria-hidden="true"></div>
+  <div class="hero-glow glow-b" aria-hidden="true"></div>
+  <div class="hero-energy" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="particle-field" id="particleField" aria-hidden="true"></div>
+  <div class="circuit circuit-left" aria-hidden="true"></div>
+  <div class="circuit circuit-right" aria-hidden="true"></div>
+  <div class="hero-inner wrap">
+    <div class="hero-copy reveal">
+      <div class="hero-kicker-row">
+        <div class="eyebrow"><span></span> KABINET ARUNIKA 2026</div>
+        <span class="hero-status"><i></i> SYSTEM ONLINE</span>
+      </div>
+      <p class="hero-overline">HIMPUNAN MAHASISWA PROGRAM STUDI</p>
+      <h1><span class="hero-title-main">Teknologi</span><br><em>Informasi</em></h1>
+      <div class="hero-title-rule" aria-hidden="true"><span></span></div>
+      <p class="hero-lead">Ruang informasi digital HMPS TI UIN Salatiga untuk mengenal organisasi, pengurus, kegiatan, dan kanal resmi dalam satu tempat.</p>
+      <div class="cta"><a class="btn primary" href="#tentang">Kenal HMPS <span class="btn-icon">→</span></a><a class="btn outline" href="#kegiatan">Lihat Kegiatan <span class="btn-icon">↗</span></a></div>
+      <div class="hero-stats" aria-label="Ringkasan organisasi">
+        <div><strong>2026</strong><span>Periode</span></div>
+        <i></i>
+        <div><strong>ARUNIKA</strong><span>Kabinet</span></div>
+        <i></i>
+        <div><strong>UIN SAGA</strong><span>Institusi</span></div>
+      </div>
+    </div>
+    <div class="hero-mark reveal delay-1" aria-label="Logo HMPS TI">
+      <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div>
+      <div class="logo-frame">
+        <div class="logo-depth" aria-hidden="true"></div>
+        <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+        <img src="assets/logo/logo-transparent.png" alt="Logo HMPS Teknologi Informasi UIN Salatiga">
+      </div>
+      <div class="data-chip"><span class="pulse"></span> HMPS_TI // 2026</div>
+    </div>
+  </div>
+</section>
+
+<nav class="quick-nav" aria-label="Navigasi cepat halaman">
+  <div class="wrap quick-nav-inner">
+    <a href="#tentang" class="quick-link active">Tentang</a>
+    <a href="#struktur" class="quick-link">Struktur</a>
+    <a href="#kegiatan" class="quick-link">Kegiatan</a>
+    <a href="#kontak" class="quick-link">Kontak</a>
+  </div>
+</nav>
+
+<section class="section about" id="tentang">
+  <div class="wrap">
+    <div class="section-head reveal"><div><p class="kicker">WHO WE ARE</p><h2>Mengenal <em>HMPS TI</em></h2></div></div>
+    <div class="about-layout">
+      <div class="about-intro reveal">
+        <div class="about-logo"><img src="assets/logo/logo-transparent.png" alt="Logo HMPS TI"></div>
+        <div><p class="label">HIMPUNAN MAHASISWA PROGRAM STUDI</p><h3>Teknologi Informasi<br>UIN Salatiga</h3><p class="muted">Kabinet Arunika 2026</p></div>
+      </div>
+      <div class="about-content reveal delay-1">
+        <div class="fact-grid" id="facts"></div>
+        <div class="vm-grid">
+          <article class="info-panel"><span class="panel-tag">PROFIL</span><h3>Profil Organisasi</h3><p class="na">Informasi profil belum diisi.</p></article>
+          <article class="info-panel"><span class="panel-tag gold">VISI</span><h3>Visi</h3><p class="na">Informasi visi belum diisi.</p></article>
+          <article class="info-panel"><span class="panel-tag red">MISI</span><h3>Misi</h3><p class="na">Informasi misi belum diisi.</p></article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section structure" id="struktur">
+  <div class="structure-grid-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="section-head light reveal"><div><p class="kicker">THE PEOPLE BEHIND IT</p><h2>Struktur <em>Organisasi</em></h2><p class="section-desc">Kabinet Arunika 2026</p></div></div>
+    <div class="org-shell reveal delay-1">
+      <div class="org-toolbar">
+        <div class="tabs" id="tabs" role="tablist" aria-label="Divisi organisasi"></div>
+        <label class="search"><span class="sr">Cari nama atau jabatan</span><span class="search-icon">⌕</span><input id="q" type="search" placeholder="Cari anggota..."></label>
+      </div>
+      <div class="org-stage">
+        <canvas class="org-fx-canvas" id="orgFxCanvas" aria-hidden="true"></canvas>
+        <button class="slide-arrow prev" id="prevMember" type="button" aria-label="Anggota sebelumnya">‹</button>
+        <div class="member-viewport" id="panel" role="tabpanel" aria-live="polite"></div>
+        <button class="slide-arrow next" id="nextMember" type="button" aria-label="Anggota berikutnya">›</button>
+      </div>
+      <div class="org-footer"><span id="memberCounter">01 / 01</span><div class="dots" id="memberDots" aria-hidden="true"></div><span class="active-label"><span class="status-dot"></span> ARUNIKA / ACTIVE</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section activities" id="kegiatan">
+  <div class="activities-bg" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="section-head reveal"><div><p class="kicker">WHAT WE DO</p><h2>Jejak <em>Kegiatan</em></h2><p class="section-desc">Dokumentasi dan arsip kegiatan HMPS TI.</p></div></div>
+
+    <article class="activity-feature reveal" id="featured"></article>
+
+    <div class="activity-index reveal delay-1">
+      <div class="activity-index-copy">
+        <span class="panel-tag">ACTIVITY ARCHIVE</span>
+        <h3>Arsip Kegiatan</h3>
+        <p><span id="activityCount">0</span> kegiatan tersimpan.</p>
+      </div>
+      <button class="archive-toggle" id="archiveToggle" type="button" aria-expanded="false" aria-controls="activityArchivePanel">
+        <span class="archive-icon">+</span><span id="archiveToggleText">Buka arsip</span>
+      </button>
+    </div>
+
+    <div class="activity-archive-panel" id="activityArchivePanel" hidden>
+      <div class="archive-toolbar">
+        <div class="archive-tabs" id="archiveTabs" role="tablist" aria-label="Filter periode kegiatan"></div>
+        <label class="archive-search"><span class="sr">Cari kegiatan</span><span>⌕</span><input id="activitySearch" type="search" placeholder="Cari kegiatan..." /></label>
+      </div>
+      <div class="activity-list" id="activities"></div>
+      <div class="activity-archive-gallery">
+        <div><span class="panel-tag">DOCUMENTATION</span><h3>Galeri Dokumentasi</h3><p>Dokumentasi kegiatan HMPS TI.</p></div>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="kontak">
+  <div class="contact-grid-bg" aria-hidden="true"></div>
+  <div class="wrap contact-inner">
+    <div class="section-head light reveal"><div><p class="kicker">STAY CONNECTED</p><h2>Terhubung dengan <em>HMPS TI</em></h2><p class="section-desc">Temukan kanal informasi resmi dan ikuti aktivitas HMPS TI.</p></div></div>
+    <div class="contacts" id="contacts"></div>
+  </div>
+</section>
+<nav class="mobile-nav" aria-label="Navigasi cepat mobile">
+  <a href="#beranda"><span>⌂</span>Beranda</a>
+  <a href="#tentang"><span>✦</span>Tentang</a>
+  <a href="#struktur"><span>◈</span>Struktur</a>
+  <a href="#kegiatan"><span>▣</span>Kegiatan</a>
+  <a href="#kontak"><span>✉</span>Kontak</a>
+</nav>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-top">
+    <div class="footer-brand"><span class="brand-logo"><img src="assets/logo/logo-transparent.png" alt="Logo HMPS TI"></span><div><strong>HMPS Teknologi Informasi</strong><small>UIN Salatiga · Kabinet Arunika 2026</small></div></div>
+    <div class="footer-note">DIGITAL ORGANIZATION<br><span>HMPS_TI // 2026</span></div>
+  </div>
+  <div class="wrap foot-bottom"><span>© 2026 HMPS Teknologi Informasi UIN Salatiga</span><span>Make information accessible.</span></div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlg-title"><button class="x" id="dlg-x" aria-label="Tutup">×</button><div id="dlg-body"></div></dialog>
+<script src="data/members.js"></script>
+<script src="data/activities.js"></script>
+<script src="js/main.js"></script>
+<script src="js/structure.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/activities.js"></script>
+</body>
+</html>

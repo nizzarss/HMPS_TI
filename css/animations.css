@@ -1,0 +1,87 @@
+.reveal{opacity:0;transform:translateY(22px);animation:reveal .8s ease forwards}.delay-1{animation-delay:.18s}
+@keyframes reveal{to{opacity:1;transform:none}}
+@keyframes scan{0%,100%{top:0;opacity:.35}50%{top:calc(100% - 2px);opacity:1}}
+@keyframes float{50%{transform:translateY(-7px)}}
+.hero-mark .logo-frame{animation:float 5s ease-in-out infinite}
+.hero-mark .orbit-1{animation:orbit 18s linear infinite}
+.hero-mark .orbit-2{animation:orbit2 23s linear infinite}
+@keyframes orbit{to{transform:rotate(342deg)}}
+@keyframes orbit2{to{transform:rotate(-332deg)}}
+.member.swap-in{animation:memberIn .42s cubic-bezier(.2,.75,.25,1) both}
+.member.swap-out{animation:memberOut .25s ease both}
+@keyframes memberIn{from{opacity:0;transform:translateX(32px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes memberOut{to{opacity:0;transform:translateX(-28px) scale(.985)}}
+
+
+.org-shell .member.fx-swipe-left{animation:memberSwipeLeft .34s cubic-bezier(.22,.8,.28,1) both}
+.org-shell .member.fx-swipe-right{animation:memberSwipeRight .34s cubic-bezier(.22,.8,.28,1) both}
+@keyframes memberSwipeLeft{0%{opacity:0;transform:translateX(38px) scale(.98) rotateY(-4deg)}100%{opacity:1;transform:translateX(0) scale(1) rotateY(0)}}
+@keyframes memberSwipeRight{0%{opacity:0;transform:translateX(-38px) scale(.98) rotateY(4deg)}100%{opacity:1;transform:translateX(0) scale(1) rotateY(0)}}
+
+
+.welcome-screen{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;overflow:hidden;background:
+  radial-gradient(circle at 50% 44%,rgba(42,112,237,.18),transparent 24%),
+  radial-gradient(circle at 82% 20%,rgba(245,197,66,.06),transparent 22%),
+  radial-gradient(circle at 18% 78%,rgba(127,29,29,.09),transparent 20%),
+  linear-gradient(135deg,#030a22 0%,#061333 48%,#040b24 100%);
+  color:#fff;isolation:isolate;opacity:1;visibility:visible;transition:opacity .55s ease,visibility .55s ease}
+.welcome-screen.is-exiting{opacity:0;visibility:hidden;pointer-events:none}
+.preloading{overflow:hidden}
+.welcome-grid{position:absolute;inset:-8%;background-image:linear-gradient(rgba(79,139,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(79,139,255,.09) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(circle at center,#000 0 44%,transparent 78%);opacity:.55;animation:welcomeGridMove 18s linear infinite}
+.welcome-orbit-bg{position:absolute;width:min(58vw,760px);height:min(58vw,760px);border:1px solid rgba(59,130,246,.13);border-radius:50%;box-shadow:0 0 80px rgba(59,130,246,.06);animation:welcomeOrbitSpin 22s linear infinite}
+.welcome-orbit-bg:before,.welcome-orbit-bg:after{content:"";position:absolute;inset:7%;border-radius:50%;border:1px dashed rgba(245,197,66,.08)}
+.welcome-orbit-bg:after{inset:18%;border-color:rgba(59,130,246,.1)}
+.welcome-topline{position:absolute;top:42px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;font:700 .68rem/1 "Space Grotesk";letter-spacing:.2em;color:#89a8df;white-space:nowrap;opacity:0;animation:welcomeFadeUp .65s .12s ease forwards}
+.welcome-topline span{width:46px;height:1px;background:linear-gradient(90deg,transparent,var(--blue))}.welcome-topline span:last-child{background:linear-gradient(90deg,var(--gold),transparent)}
+.welcome-center{position:relative;z-index:2;width:min(680px,calc(100% - 36px));text-align:center}
+.welcome-logo-wrap{position:relative;width:260px;height:260px;margin:0 auto 28px;display:grid;place-items:center;perspective:1000px}
+.welcome-logo-shell{width:176px;height:176px;position:relative;border-radius:50%;display:grid;place-items:center;transform-style:preserve-3d;animation:welcomeLogoIn 1.15s cubic-bezier(.18,.84,.23,1) forwards, welcomeCoin 10s 1.35s linear infinite;opacity:0}
+.welcome-logo-shell:before{content:"";position:absolute;inset:-12px;border-radius:50%;background:linear-gradient(145deg,rgba(255,255,255,.22),transparent 28%,rgba(59,130,246,.12) 65%,rgba(0,0,0,.28));box-shadow:0 22px 48px rgba(0,0,0,.38),0 0 48px rgba(59,130,246,.2),inset 0 0 22px rgba(255,255,255,.08);transform:translateZ(-10px)}
+.welcome-logo-shell:after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(255,255,255,.22);box-shadow:inset 0 0 18px rgba(59,130,246,.18)}
+.welcome-logo-shell img{width:100%;height:100%;object-fit:contain;border-radius:50%;filter:drop-shadow(0 12px 20px rgba(0,0,0,.34));backface-visibility:hidden}
+.welcome-logo-ring{position:absolute;inset:-25px;border-radius:50%;border:1px solid rgba(59,130,246,.28);box-shadow:0 0 20px rgba(59,130,246,.12),inset 0 0 20px rgba(59,130,246,.05)}
+.welcome-logo-ring:before{content:"";position:absolute;left:12%;right:12%;top:-2px;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);box-shadow:0 0 14px rgba(245,197,66,.8);border-radius:50%;animation:welcomeSweep 2.6s ease-in-out infinite}
+.welcome-orbit{position:absolute;border:1px solid rgba(59,130,246,.23);border-radius:50%;transform-style:preserve-3d}
+.welcome-orbit-a{width:238px;height:96px;transform:rotate(-23deg);animation:welcomeOrbitA 7s linear infinite}
+.welcome-orbit-b{width:284px;height:136px;transform:rotate(28deg);border-color:rgba(245,197,66,.16);animation:welcomeOrbitB 10s linear infinite}
+.welcome-chip{position:absolute;bottom:3px;right:2px;padding:8px 11px;border:1px solid rgba(59,130,246,.42);background:rgba(3,10,31,.86);border-radius:10px;color:#9fb7e8;font:700 .61rem/1 "Space Grotesk";letter-spacing:.12em;opacity:0;animation:welcomeFadeUp .65s .98s ease forwards}
+.welcome-chip b{color:var(--gold);font-weight:700}
+.welcome-kicker{margin:0;color:var(--gold);font:700 .72rem/1.2 "Space Grotesk";letter-spacing:.26em;opacity:0;animation:welcomeFadeUp .7s .62s ease forwards}
+.welcome-center h2{margin:12px 0 8px;font:700 clamp(2rem,5vw,3.45rem)/1.02 "Space Grotesk";letter-spacing:-.05em;opacity:0;animation:welcomeFadeUp .8s .82s ease forwards}.welcome-center h2 span{color:#eff5ff}
+.welcome-sub{margin:0;color:#91a6cb;font-size:.86rem;letter-spacing:.06em;opacity:0;animation:welcomeFadeUp .7s 1.02s ease forwards}
+.welcome-progress{width:min(300px,70%);height:2px;margin:25px auto 10px;background:rgba(255,255,255,.1);overflow:hidden;opacity:0;animation:welcomeFade .55s 1.18s ease forwards}.welcome-progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--blue),var(--gold));box-shadow:0 0 12px rgba(59,130,246,.75);animation:welcomeLoad 1.8s 1.32s cubic-bezier(.2,.7,.2,1) forwards}
+.welcome-status{width:min(360px,86%);margin:0 auto;display:flex;justify-content:space-between;gap:18px;color:#61779e;font:700 .57rem/1.2 "Space Grotesk";letter-spacing:.1em;opacity:0;animation:welcomeFade .55s 1.18s ease forwards}.welcome-status i{display:inline-block;width:6px;height:6px;margin-right:7px;border-radius:50%;background:#4fe19b;box-shadow:0 0 10px rgba(79,225,155,.72)}.welcome-status b{color:#d8e5ff;font-weight:700}
+.welcome-skip{position:absolute;right:34px;bottom:30px;z-index:3;border:0;background:transparent;color:#7890b7;font:700 .66rem/1 "Space Grotesk";letter-spacing:.12em;cursor:pointer;opacity:0;animation:welcomeFade .6s 1.3s ease forwards}.welcome-skip:hover{color:#fff}.welcome-skip span{color:var(--gold);margin-left:6px}
+.welcome-particles{position:absolute;inset:0;pointer-events:none}.welcome-particles i{position:absolute;left:var(--x);top:var(--y);width:var(--s);height:var(--s);border-radius:50%;background:var(--blue);box-shadow:0 0 12px rgba(59,130,246,.8);opacity:.45;animation:welcomeParticle var(--d) ease-in-out infinite}.welcome-particles i:nth-child(3n){background:var(--gold);box-shadow:0 0 12px rgba(245,197,66,.65)}.welcome-particles i:nth-child(5n){background:#a74454;box-shadow:0 0 12px rgba(167,68,84,.58)}
+.welcome-lines{position:absolute;inset:0;pointer-events:none;overflow:hidden}.welcome-lines span{position:absolute;height:1px;width:22vw;min-width:150px;background:linear-gradient(90deg,transparent,rgba(59,130,246,.25),transparent);filter:blur(.2px);animation:welcomeBeam 7s linear infinite}.welcome-lines span:nth-child(1){top:24%;left:-25%;transform:rotate(18deg)}.welcome-lines span:nth-child(2){top:72%;left:-15%;animation-delay:-2.7s;transform:rotate(-14deg)}.welcome-lines span:nth-child(3){top:38%;left:-35%;animation-delay:-4.4s;transform:rotate(7deg);background:linear-gradient(90deg,transparent,rgba(245,197,66,.2),transparent)}
+@keyframes welcomeGridMove{to{transform:translate3d(42px,42px,0)}}
+@keyframes welcomeOrbitSpin{to{transform:rotate(360deg)}}
+@keyframes welcomeLogoIn{0%{opacity:0;transform:scale(.72) rotateX(38deg) rotateY(-25deg)}100%{opacity:1;transform:scale(1) rotateX(0) rotateY(0)}}
+@keyframes welcomeCoin{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}
+@keyframes welcomeOrbitA{to{transform:rotate(-383deg)}}
+@keyframes welcomeOrbitB{to{transform:rotate(-332deg)}}
+@keyframes welcomeSweep{0%,100%{transform:translateX(-10%);opacity:.3}50%{transform:translateX(10%);opacity:1}}
+@keyframes welcomeFadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes welcomeFade{from{opacity:0}to{opacity:1}}
+@keyframes welcomeLoad{to{width:100%}}
+@keyframes welcomeParticle{0%,100%{transform:translate3d(0,4px,0);opacity:.18}50%{transform:translate3d(5px,-14px,0);opacity:.72}}
+@keyframes welcomeBeam{from{transform:translateX(0)}to{transform:translateX(150vw)}}
+@media(max-width:700px){.welcome-topline{top:26px;font-size:.55rem;letter-spacing:.16em}.welcome-topline span{width:25px}.welcome-center{width:calc(100% - 32px)}.welcome-logo-wrap{width:215px;height:215px;margin-bottom:24px}.welcome-logo-shell{width:142px;height:142px}.welcome-orbit-a{width:196px;height:80px}.welcome-orbit-b{width:230px;height:110px}.welcome-logo-ring{inset:-19px}.welcome-chip{right:-3px;bottom:0;font-size:.53rem;padding:7px 9px}.welcome-center h2{font-size:clamp(1.7rem,8.7vw,2.45rem);line-height:1.03}.welcome-kicker{font-size:.61rem}.welcome-sub{font-size:.73rem}.welcome-progress{margin-top:21px}.welcome-status{font-size:.49rem}.welcome-skip{right:18px;bottom:20px;font-size:.57rem}}
+@media(prefers-reduced-motion:reduce){.welcome-screen *{animation:none!important;transition:none!important}.welcome-logo-shell{opacity:1;transform:none}.welcome-topline,.welcome-kicker,.welcome-center h2,.welcome-sub,.welcome-progress,.welcome-status,.welcome-chip,.welcome-skip{opacity:1}}
+
+
+.welcome-screen.waiting .welcome-logo-shell{opacity:.96;transform:none;animation:none}
+.welcome-screen.waiting .welcome-topline{opacity:1;animation:none}
+.welcome-screen.waiting .welcome-kicker{opacity:.78;animation:none}
+.welcome-screen.waiting .welcome-center h2{opacity:1;animation:none}
+.welcome-screen.waiting .welcome-sub{opacity:1;animation:none}
+.welcome-screen.waiting .welcome-progress{opacity:.55;animation:none}
+.welcome-screen.waiting .welcome-progress span{width:14%;animation:none}
+.welcome-screen.waiting .welcome-status{opacity:.85;animation:none}
+.welcome-screen.waiting .welcome-chip{opacity:1;animation:none}
+.welcome-screen.waiting .welcome-skip{opacity:1;animation:none}
+.welcome-screen.waiting .welcome-logo-ring:before{animation-play-state:paused}
+.welcome-prompt{margin:0;color:#8da6d1;font:700 .64rem/1.2 "Space Grotesk";letter-spacing:.14em;text-transform:uppercase;text-align:center;opacity:.82;animation:welcomePromptPulse 1.8s ease-in-out infinite}
+.welcome-prompt.is-hidden{opacity:0;transform:translateY(6px);pointer-events:none}
+@keyframes welcomePromptPulse{0%,100%{opacity:.42}50%{opacity:1}}
+@media(max-width:700px){.welcome-prompt{font-size:.54rem;letter-spacing:.11em}}
